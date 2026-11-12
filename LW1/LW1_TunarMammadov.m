@@ -9,20 +9,19 @@ clc; clear; close all;
 x = 1:32;
 y = x.^2;
 
-plot(x, y, 'o-r', x, y/3, 'xb')
+plot(x, y, 'o-r', x, y/3, 'xg')
 title('Dvi funkcijos')
 xlabel('X-as')
 ylabel('F_1 [-o-] i F_2 [-x-]')
 
-%% Complementary Task 
-
+%% Complementary Task
 
 N = 4;
 
 v = (N+1) : 0.5 : (N+4);
 
-A = [N   N+1 N+2; 
-     N+3 N+4 N+5; 
+A = [N   N+1 N+2;
+     N+3 N+4 N+5;
      N+6 N+7 N+8];
 
 a_elem = A(3, 2);
@@ -31,5 +30,15 @@ b_block = A(2:3, 1:2);
 
 c_corners = A([1, 3], [1, 3]);
 
-v_sub = v(1:3)';     
-A_concat = [A, v_sub]; 
+v_sub = v(1:3)';
+A_concat = [A, v_sub];
+
+disp(A);
+
+disp(a_elem);
+
+disp(b_block);
+
+disp(c_corners);
+
+disp(A_concat);
